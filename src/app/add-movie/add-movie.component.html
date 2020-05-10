@@ -1,0 +1,36 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<div class="row">
+    <div class="col-lg-1"></div>
+<div *ngIf="check0">
+    <h2><u>Add Movie Here</u></h2><br>
+    <label>Movie ID:</label>
+    <input type="text" name="movieid" [(ngModel)]="movie_obj.movie_Id" placeholder="enter movie Id" required class="form-control" autocomplete="off">
+    <label>Movie Name:</label>
+    <input type="text" name="moviename" [(ngModel)]="movie_obj.movie_Name" placeholder="enter movie name" required class="form-control" autocomplete="off">
+    <label>Movie Genre:</label>
+    <input type="text" name="moviegenre" [(ngModel)]="movie_obj.movie_Genre" placeholder="enter movie genre" required class="form-control" autocomplete="off">
+    <label>Movie Directore Name:</label>
+    <input type="text" name="moviedirector" [(ngModel)]="movie_obj.movie_Director" placeholder="enter movie director name" required class="form-control" autocomplete="off">
+    <label>Movie Length:</label>
+    <input type="text" name="movielength" [(ngModel)]="movie_obj.movie_Length" placeholder="enter movie length" required class="form-control" autocomplete="off">
+    <label>Movie Language:</label>
+    <select [(ngModel)]="movie_obj.languages" class="form-control custom-select form-control browser-default">
+        <option value="English">English</option>
+        <option value="Hindi">Hindi</option>
+        <option value="Telugu">Telugu</option>
+    </select><br>
+    <label>Movie Release Date:</label>
+    <input type="date" name="moviereleasedate" [(ngModel)]="movie_obj.movie_Release_Date" placeholder="enter movie release date" required class="form-control" autocomplete="off"><br>
+    <input type="submit" value="Add Movie" (click)="add_movie()" class="btn btn-success">
+</div>
+</div>
+
+<div class="row">
+    <div class="col-lg-1"></div>
+<div class="col-lg-4" *ngIf="check1">
+    <h4>{{add_message}}</h4>
+</div>
+</div>

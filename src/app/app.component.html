@@ -1,0 +1,43 @@
+
+<head>
+        <title>
+          Booking a movie ticket
+        </title>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      
+        <style>
+          .span{
+            color: white;
+          }
+        </style>
+</head>
+
+      <nav class="navbar navbar-light bg-dark">
+        <a class="navbar-brand font-weight-bold" href="#">
+            <span class="span">Online Movie Ticket System</span>
+        </a>
+         <ul  class="nav justify-content-end">
+            <a routerLink="Add-Movie" class="btn btn-primary"><b>Add Movie</b></a>
+        </ul>
+        <ul  class="nav justify-content-end">
+            <a routerLink="Add-Show" class="btn btn-primary"><b>Add Show</b></a>
+        </ul>
+        <ul  class="nav justify-content-end">
+            <a routerLink="Add-Theatre" class="btn btn-primary"><b>Add Theatre</b></a>
+        </ul>
+        <ul  class="nav justify-content-end">
+          <a routerLink="Delete-Show" class="btn btn-primary"><b>Delete Show</b></a>
+        </ul>
+        <ul  class="nav justify-content-end">
+          <a routerLink="Delete-Theatre" class="btn btn-primary"><b>Delete Theatre</b></a>
+        </ul>
+        <ul  class="nav justify-content-end">
+          <a routerLink="Delete-Movie" class="btn btn-primary"><b>Delete Movie</b></a>
+        </ul>
+        </nav>
+        <br>
+
+        <div>
+            <router-outlet></router-outlet>
+        </div>

@@ -1,0 +1,40 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<div class="row">
+    <div class="col-lg-1"></div>
+<div *ngIf="check0">
+    <h2><u>Add Theatre Here</u></h2><br>
+    <label>Theatre ID:</label>
+    <input type="text" name="theatreid" [(ngModel)]="theatre_obj.theatre_Id" placeholder="enter theatre Id" required class="form-control" autocomplete="off">
+    <label>Theatre Name:</label>
+    <input type="text" name="theatrename" [(ngModel)]="theatre_obj.theatre_Name" placeholder="enter theatre Name" required class="form-control" autocomplete="off">
+    <label>Theatre City:</label>
+    <input type="text" name="theatrecity" [(ngModel)]="theatre_obj.theatre_City" placeholder="enter theatre city" required class="form-control" autocomplete="off">
+    <label>Movie ID:</label>
+    <input type="text" name="movieid" [(ngModel)]="theatre_obj.movie_Id" placeholder="enter movie Id" required class="form-control" autocomplete="off">
+    <label>Movie ID:</label>
+    <input type="text" name="movieid" [(ngModel)]="theatre_obj.r_movie_id" placeholder="enter movie Id" required class="form-control" autocomplete="off">
+    <label>Manager Name:</label>
+    <input type="text" name="managername" [(ngModel)]="theatre_obj.manager_Name" placeholder="enter manager name" required class="form-control" autocomplete="off">
+    <label>Manager Contact:</label>
+    <input type="text" name="managercontact" [(ngModel)]="theatre_obj.manager_Contact" placeholder="enter manager contact" required class="form-control" autocomplete="off">
+    <br>
+    <input type="submit" value="Add Theatre" (click)="add_theatre()" class="btn btn-success">
+</div>
+</div>
+
+<div class="row">
+    <div class="col-lg-1"></div>
+<div *ngIf="check1">
+    <h4>{{theatre_message}}</h4>
+</div>
+</div>
+
+<div class="row">
+    <div class="col-lg-1"></div>
+    <div *ngIf="check2">
+        <h4>Movie ID must be same</h4>
+    </div>
+</div>

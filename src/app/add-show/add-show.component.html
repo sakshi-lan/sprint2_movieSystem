@@ -1,0 +1,46 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<div class="row">
+    <div class="col-lg-1"></div>
+<div *ngIf="check0">
+    <h2><u>Add Show Here</u></h2><br>
+    <label>Show ID:</label>
+    <input type="text" name="showid" [(ngModel)]="show_obj.show_Id" placeholder="enter show Id" required class="form-control" autocomplete="off">
+    <label>Movie ID:</label>
+    <input type="text" name="movieid" [(ngModel)]="show_obj.movie_Id" placeholder="enter movie Id" required class="form-control" autocomplete="off">
+    <label>Movie ID:</label>
+    <input type="text" name="movieid" [(ngModel)]="show_obj.r_movie_id" placeholder="enter movie Id" required class="form-control" autocomplete="off">
+    <label>Screen ID:</label>
+    <input type="text" name="screenid" [(ngModel)]="show_obj.screen_Id" placeholder="enter screen Id" required class="form-control" autocomplete="off">
+    <label>Show Name:</label><br>
+    <select [(ngModel)]="show_obj.show_Name" class="form-control custom-select form-control browser-default">
+        <option value="Morning">Morning</option>
+        <option value="Afternoon">Afternoon</option>
+        <option value="Evening">Evening</option>
+        <option value="Night">Night</option>
+    </select><br>
+    <label>Show Start Time:</label>
+    <input type="time" name="showstarttime" [(ngModel)]="show_obj.show_Start_Time" placeholder="enter show start time" required class="form-control" autocomplete="off">
+    <label>Show End Time:</label>
+    <input type="time" name="showsendtime" [(ngModel)]="show_obj.show_End_Time" placeholder="enter show end time" required class="form-control" autocomplete="off">
+    <br>
+    <input type="submit" value="Add Show" (click)="add_show()" class="btn btn-success">
+</div>
+</div>
+
+<div class="row">
+    <div class="col-lg-1"></div>
+<div *ngIf="check1">
+    <h4>{{show_message}}</h4>
+</div>
+</div>
+
+<div class="row">
+    <div class="col-lg-1"></div>
+    <div *ngIf="check2">
+        <h4>Movie ID must be same</h4>
+    </div>
+</div>
+   

@@ -1,0 +1,40 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<div align="center" class="table" *ngIf="check1">
+    <h3><u>Delete Movies</u></h3><br>
+    <table border="2">
+        <tr>
+            <th>Movie ID</th>
+            <th>Movie Name</th>
+            <th>Movie Genre</th>
+            <th>Movie Director</th>
+            <th>Movie Length</th>
+            <th>Language</th>
+            <th>Movie Release Date</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let movie of movies">
+            <td>{{movie.movie_Id}}</td>
+            <td>{{movie.movie_Name}}</td>
+            <td>{{movie.movie_Genre}}</td>
+            <td>{{movie.movie_Director}}</td>
+            <td>{{movie.movie_Length}}</td>
+            <td>{{movie.languages}}</td>
+            <td>{{movie.movie_Release_Date}}</td>
+            <td><input type="button" value="Delete" (click)="deleteMovie(movie.movie_Id)" class="btn btn-danger"></td>
+        </tr>
+        </table>
+</div>
+
+<div *ngIf="check0" align="center">
+    <h4>Deleted successfully..!!</h4>
+</div>
+
+<div *ngIf="check2" align="center">
+    <h4>Sorry, there were no records found..!!</h4>
+</div>
+
+<div *ngIf="check3" align="center">
+    <h4>Sorry, first delete the shows and theatres related to particular movie..!!</h4>
+</div>

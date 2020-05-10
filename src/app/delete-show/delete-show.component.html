@@ -1,0 +1,34 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<div align="center" class="table" *ngIf="check1">
+    <h3><u>Delete Shows</u></h3><br>
+    <table border="2">
+        <tr>
+            <th>Show ID</th>
+            <th>Screen ID</th>
+            <th>Show End Time</th>
+            <th>Show Name</th>
+            <th>Show Start Name</th>
+            <th>Movie ID</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let show of shows">
+            <td>{{show.show_Id}}</td>
+            <td>{{show.screen_Id}}</td>
+            <td>{{show.show_Name}}</td>
+            <td>{{show.show_Start_Time}}</td>
+            <td>{{show.show_End_Time}}</td>
+            <td>{{show.r_movie_id}}</td>
+            <td><input type="button" value="Delete" (click)="deleteShow(show.show_Id)" class="btn btn-danger"></td>
+        </tr>
+        </table>
+</div>
+
+<div *ngIf="check0" align="center">
+    <h4>Deleted successfully..!!</h4>
+</div>
+
+<div *ngIf="check2" align="center">
+    <h4>Sorry, there were no records found..!!</h4>
+</div>
